@@ -1,0 +1,24 @@
+<div class="container">
+  <table class="table table-bordered table-inverse">
+    <tr>
+      <th>Ticker</th>
+      <th>Company Name</th>
+      <th>Market Price</th>
+      <th class="text-right">Purchase Price</th>
+    </tr>
+    <tr *ngFor="let trade of trades">
+      <td>
+        <a [routerLink]="['/admin/view', trade.id]">{{trade.ticker}}</a>
+      </td>
+      <td>
+        {{trade.companyname}}
+      </td>
+      <td>
+        {{trade.marketprice}}
+      </td>
+      <td class="text-right">
+        {{trade.comments}}
+      </td>
+    </tr>
+  </table>
+</div>
